@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playlist Duration Analyzer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <div class="container" id='container'>
+        <h1 class="hehe">Welcome to Playlist Duration Analyzer</h1>
+        <p class="intro">Ever wondered how long it takes to binge-watch your favorite YouTube playlist? Find out in
+            seconds!</p>
+        <p class="catchy">Get ready to calculate your playlist's duration and optimize your viewing experience!</p>
+        <div class="input-group">
+            <input type="text" id="playlistUrl" placeholder="enter youtube playlist URL">
+            <button onclick="analyzePlaylist()" id="AnalyzeButton">Analyze</button>
+        </div>
+        <div id="results" class="results">
+            <!-- Results will be displayed here -->
+        </div>
+    </div>
+    <div class="rightside" id='rightside'>
+        <div class="container2">
+            <p>In how many days do you want to complete the playlist?</p>
+            <div class="input-containers">
+                <input type="number" id="Days" placeholder="days" value="10">
+                <select id="speedD" name="speed">
+                    <option value="0.25">0.25x</option>
+                    <option value="0.5">0.5x</option>
+                    <option value="0.75">0.75x</option>
+                    <option value="1" selected>1x</option>
+                    <option value="1.25">1.25x</option>
+                    <option value="1.75">1.75x</option>
+                    <option value="1.5">1.5x</option>
+                    <option value="2">2x</option>
+                </select>
+                <button onclick="howManyDays()" id="b2">Go</button>
+            </div>
+
+            <div id="results2" class="results">
+                <!-- Results will be displayed here -->
+            </div>
+        </div>
+        <div class="container3">
+            <p>How many hours you can watch per Day?</p>
+            <div class="input-container">
+                <input type="number" min="0" max="24" id="hours" placeholder="hours" value="1">
+                <input type="number" min='0' max='59' id="minutes" placeholder="minutes" value="0">
+
+                <select id="speed" name="speed">
+                    <option value="0.25">0.25x</option>
+                    <option value="0.5">0.5x</option>
+                    <option value="0.75">0.75x</option>
+                    <option value="1" selected>1x</option>
+                    <option value="1.25">1.25x</option>
+                    <option value="1.75">1.75x</option>
+                    <option value="1.5">1.5x</option>
+                    <option value="2">2x</option>
+                </select>
+                <button onclick="hoursPerDay()" id="b3">Go</button>
+
+            </div>
+
+            <div id="results3" class="results">
+                <!-- Results will be displayed here -->
+            </div>
+        </div>
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
